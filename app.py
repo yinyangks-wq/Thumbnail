@@ -62,7 +62,8 @@ with col2:
             position = ((final_img.width - subject_resized.width) // 2, 0)
             final_img.paste(subject_resized, position, mask=subject_resized)
             
-            st.image(final_img, caption="ဖန်တီးပြီးသော Thumbnail", use_column_width=True)
+            # ပြင်ဆင်ထားသော လိုင်း (use_container_width=True)
+            st.image(final_img, caption="ဖန်တီးပြီးသော Thumbnail", use_container_width=True)
             
             buf = io.BytesIO()
             final_img.save(buf, format="PNG")
